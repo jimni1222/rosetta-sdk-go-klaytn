@@ -11,6 +11,9 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
+// Modifications Copyright © 2022 Klaytn
+// Modified and improved for the Klaytn development.
 
 package coordinator
 
@@ -109,7 +112,7 @@ type Helper interface {
 		[]*types.Operation,
 		*types.TransactionIdentifier,
 		string, // network transaction
-		int64, // confirmation depth
+		int64,  // confirmation depth
 	) error
 
 	// Derive returns a new *types.AccountIdentifier for a provided publicKey.
@@ -153,7 +156,7 @@ type Helper interface {
 	Parse(
 		context.Context,
 		*types.NetworkIdentifier,
-		bool, // signed
+		bool,   // signed
 		string, // transaction
 	) ([]*types.Operation, []*types.AccountIdentifier, map[string]interface{}, error)
 
